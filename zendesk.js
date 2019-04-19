@@ -355,7 +355,7 @@ window.Thanx = {
             new Element('span', {html: 'Search by: '})
           ).adopt(
             new Element('a', {
-              href: Thanx.adminUrl + "user_search?user=" + user.email,
+              href: Thanx.adminUrl + "/users?utf8=%E2%9C%93&q%5Bfirst_name_or_last_name_or_email_contains%5D=" + user.email + "&commit=Filter&order=id_desc",
               target: 'admin',
               events: {
                 click: this.adminClickHandler.bind(this),
@@ -369,7 +369,7 @@ window.Thanx = {
             }).set('text', "email")
           ).adopt(
             new Element('a', {
-              href: Thanx.adminUrl + "user_search?user=" + user.name,
+              href: Thanx.adminUrl + "/users?utf8=%E2%9C%93&q%5Bfirst_name_or_last_name_or_email_contains%5D=" + user.name + "&commit=Filter&order=id_desc",,
               target: 'admin',
               events: {
                 click: this.adminClickHandler.bind(this),
