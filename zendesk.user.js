@@ -8,10 +8,10 @@
 
 var main = function(){
 	var moo = document.createElement('script');
-	moo.src = "https://www.dropbox.com/s/yxzk3rjfg2baqqy/mootools.js?raw=1";
+	moo.src = "https://rawcdn.githack.com/anutron/zendesk/74357fe49d605842e29935222d85172e90ccb35a/mootools.js";
 	moo.onload = function(){
 		var scr = document.createElement('script');
-		scr.src = "https://www.dropbox.com/s/uyjyxfuundjncei/zendesk.js?raw=1";
+		scr.src = "https://rawcdn.githack.com/anutron/zendesk/74357fe49d605842e29935222d85172e90ccb35a/zendesk.js";
 		document.head.appendChild(scr);
 	};
 	document.head.appendChild(moo);

@@ -1,6 +1,6 @@
 window.Thanx = {
 
-  adminUrl: 'https://admin.thanx.com',
+  adminUrl: 'https://admin.thanx.com/admin/',
 
   Imgs: new Class({
 
@@ -305,7 +305,7 @@ window.Thanx = {
         }
       }).adopt(
         new Element('a', {
-          href: "https://admin.thanx.com/users/" + this.getUserId(),
+          href: Thanx.adminUrl + "users/" + this.getUserId(),
           target: 'admin',
           events: {
             click: this.adminClickHandler.bind(this),
@@ -320,7 +320,7 @@ window.Thanx = {
         }).set('text', "Thanx user #" + this.getUserId())
       ).adopt(
         new Element('a', {
-          href: "https://admin.thanx.com/users/" + this.getUserId(),
+          href: Thanx.adminUrl + "users/" + this.getUserId(),
           target: 'admin',
           'class': 'addTxn btn',
           data: {
@@ -355,7 +355,7 @@ window.Thanx = {
             new Element('span', {html: 'Search by: '})
           ).adopt(
             new Element('a', {
-              href: "https://admin.thanx.com/search_for_users_or_merchants?find_and_go=true&search=" + user.email,
+              href: Thanx.adminUrl + "user_search?user=" + user.email,
               target: 'admin',
               events: {
                 click: this.adminClickHandler.bind(this),
@@ -369,7 +369,7 @@ window.Thanx = {
             }).set('text', "email")
           ).adopt(
             new Element('a', {
-              href: "https://admin.thanx.com/search_for_users_or_merchants?find_and_go=true&search=" + user.name,
+              href: Thanx.adminUrl + "user_search?user=" + user.name,
               target: 'admin',
               events: {
                 click: this.adminClickHandler.bind(this),
